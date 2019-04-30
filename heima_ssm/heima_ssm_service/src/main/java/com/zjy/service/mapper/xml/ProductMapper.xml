@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjy.dao.ProductMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.zjy.domain.Product">
+        <id column="ID" property="id" />
+        <result column="PRODUCTNUM" property="productNum" />
+        <result column="PRODUCTNAME" property="productName" />
+        <result column="CITYNAME" property="cityName" />
+        <result column="DEPARTURETIME" property="departureTime" />
+        <result column="PRODUCTPRICE" property="productPrice" />
+        <result column="PRODUCTDESC" property="productDesc" />
+        <result column="PRODUCTSTATUS" property="productStatus" />
+    </resultMap>
+
+</mapper>
