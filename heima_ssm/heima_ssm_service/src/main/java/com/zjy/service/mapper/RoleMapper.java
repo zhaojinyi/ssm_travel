@@ -2,11 +2,9 @@ package com.zjy.service.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zjy.domain.Role;
+import com.zjy.service.dto.PermissionDto;
 import com.zjy.service.dto.RoleDto;
-import org.apache.ibatis.annotations.Many;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -27,4 +25,9 @@ public interface RoleMapper extends BaseMapper<Role>{
     })
     List<RoleDto> findRoleByUserId(String userId);
 
+    @Select("select * from permission where id not in (select permissionId from role_permission where roleId=#{roleId})")
+    List<PermissionDto> findOtherPermission(String roleId);
+
+    @Insert("insert into role_permission(roleId, permissionId) values(#{roleId}, #{permissionId})")
+    void addPermissionToRole(@Param("roleId") String roleId, @Param("permissionId") String permissionId);
 }
