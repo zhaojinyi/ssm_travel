@@ -2,6 +2,7 @@ package com.zjy.service.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zjy.domain.UserInfo;
+import com.zjy.service.dto.RoleDto;
 import com.zjy.service.dto.UserInfoDto;
 import org.apache.ibatis.annotations.*;
 
@@ -43,4 +44,10 @@ public interface UserInfoMapper extends BaseMapper<UserInfo> {
             @Result(property = "roles", column = "id", javaType = java.util.List.class, many=@Many(select = "com.zjy.service.mapper.RoleMapper.findRoleByUserId")),
     })
     UserInfoDto showUser(String id);
+
+    @Select("select * from role where id not in (select roleId from users_role where userId=#{userId})")
+    List<RoleDto> findOtherRoles(String userId);
+
+    @Insert("insert into users_role(userId, roleId) values(#{userId}, #{roleId})")
+    void addRoleToUser(@Param("userId") String userId, @Param("roleId") String roleId);
 }

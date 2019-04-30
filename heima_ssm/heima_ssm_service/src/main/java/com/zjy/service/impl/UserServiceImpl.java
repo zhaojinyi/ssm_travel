@@ -71,4 +71,18 @@ public class UserServiceImpl implements UserSerivce{
     public UserInfoDto showUser(String id) {
         return userInfoMapper.showUser(id);
     }
+
+    @Override
+    public void addRoleToUser(String userId, String[] roleIds) {
+
+        for (String roleId: roleIds) {
+            userInfoMapper.addRoleToUser(userId, roleId);
+        }
+
+    }
+
+    @Override
+    public List<RoleDto> findOtherRoles(String userId) {
+        return userInfoMapper.findOtherRoles(userId);
+    }
 }

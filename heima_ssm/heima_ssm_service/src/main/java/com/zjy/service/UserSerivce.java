@@ -1,6 +1,7 @@
 package com.zjy.service;
 
 import com.zjy.domain.UserInfo;
+import com.zjy.service.dto.RoleDto;
 import com.zjy.service.dto.UserInfoDto;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
@@ -18,4 +19,8 @@ public interface UserSerivce extends UserDetailsService {
     void save(UserInfo userInfo);
 
     UserInfoDto showUser(String id);
+
+    List<RoleDto> findOtherRoles(String userId);
+
+    void addRoleToUser(String userId, String[] roleIds);
 }
