@@ -101,7 +101,7 @@
 
 						<div class="col-md-2 title">权限名称</div>
 						<div class="col-md-4 data">
-							<input type="text" class="form-control" name="permissionName"
+							<input type="text" class="form-control" name="permissionname"
 								placeholder="权限名称" value="">
 						</div>
 						<div class="col-md-2 title">RUL</div>

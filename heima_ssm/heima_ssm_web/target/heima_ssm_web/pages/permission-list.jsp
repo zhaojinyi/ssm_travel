@@ -147,7 +147,7 @@
 										<tr>
 											<td><input name="ids" type="checkbox"></td>
 											<td>${p.id }</td>
-											<td>${p.permissionName }</td>
+											<td>${p.permissionname }</td>
 											<td>${p.url }</td>
 											<td class="text-center">
 												<a href="${pageContext.request.contextPath}/role/findById.do?id=${p.id}" class="btn bg-olive btn-xs">详情</a>
