@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="0babe20a-c285-41a4-8c50-de1843c49f6d" name="Default" comment="" />
+    <list default="true" readonly="true" id="0babe20a-c285-41a4-8c50-de1843c49f6d" name="Default" comment="把idea推送到github" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/heima_ssm_service/target/" />
@@ -246,13 +246,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="K:/Program Files/Git/bin/git.exe" />
     <property name="SearchEverywhereHistoryKey" value="Orders&#9;FILE&#9;file://E:/idea_workspace/heima_ssm/heima_ssm_domain/src/main/java/com/zjy/domain/Orders.java&#10;Member&#9;FILE&#9;file://E:/idea_workspace/heima_ssm/heima_ssm_domain/src/main/java/com/zjy/domain/Member.java" />
   </component>
   <component name="RecentsManager">
@@ -447,12 +447,12 @@
       <workItem from="1556533479102" duration="36000" />
       <workItem from="1556618000986" duration="773000" />
       <workItem from="1556620405054" duration="1008000" />
-      <workItem from="1556621559890" duration="961000" />
+      <workItem from="1556621559890" duration="2244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65289000" />
+    <option name="totallyTimeSpent" value="66572000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
