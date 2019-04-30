@@ -1,0 +1,1 @@
+使用maven+springMVC+spring+mybatisPlus+springSecurity的小型项目，作为框架编程技术的课程设计
