@@ -19,7 +19,7 @@ import java.util.List;
  * @Description: com.zjy.controller
  */
 @Controller
-@RequestMapping("role")
+@RequestMapping("/role")
 public class RoleController {
 
     @Autowired
@@ -28,7 +28,7 @@ public class RoleController {
     @Autowired
     private RoleConverter roleConverter;
 
-    @RequestMapping("findAll.do")
+    @RequestMapping("/findAll.do")
     public ModelAndView findAll() {
         ModelAndView mv = new ModelAndView();
         List<RoleDto> roleDtoList = roleConverter.listEntityToDto(roleService.list());
@@ -37,14 +37,14 @@ public class RoleController {
         return mv;
     }
 
-    @RequestMapping("save.do")
+    @RequestMapping("/save.do")
     public String addRole(RoleDto roleDto) {
         Role role = roleConverter.dtoToEntity(roleDto);
         roleService.save(role);
         return "redirect:findAll.do";
     }
 
-    @RequestMapping("findRoleByIdAndPermission.do")
+    @RequestMapping("/findRoleByIdAndPermission.do")
     public ModelAndView findRoleByIdAndPermission(@RequestParam(name = "id", required = true)String roleId) {
         ModelAndView mv = new ModelAndView();
         //  根据RoleId查询role
@@ -57,7 +57,7 @@ public class RoleController {
         return mv;
     }
 
-    @RequestMapping("addPermissionToRole.do")
+    @RequestMapping("/addPermissionToRole.do")
     public String addPermissionToRole(@RequestParam(name = "roleId", required = true)String roleId, @RequestParam(name = "ids", required = true)String[] permissionIds){
         roleService.addPermissionToRole(roleId, permissionIds);
         return "redirect:findAll.do";

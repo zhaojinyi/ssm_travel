@@ -18,7 +18,7 @@ import java.util.List;
  * @Description: com.zjy.controller
  */
 @Controller
-@RequestMapping("orders")
+@RequestMapping("/orders")
 public class OrdersController {
 
     @Autowired
@@ -38,9 +38,9 @@ public class OrdersController {
 //        return mv;
 //    }
 
-    @RequestMapping("findAll.do")
+    @RequestMapping("/findAll.do")
     @Secured("ROLE_ADMIN")
-    public ModelAndView findAll(@RequestParam(name = "page", required = true, defaultValue = "1") int page, @RequestParam(name="size", required = true, defaultValue = "4")int size) throws Exception {
+    public ModelAndView findAll(@RequestParam(name = "page", required = true, defaultValue = "1") Integer page, @RequestParam(name="size", required = true, defaultValue = "4")Integer size) throws Exception {
 
         ModelAndView mv = new ModelAndView();
         List<OrdersDto> ordersDtoList = ordersService.findAll(page, size);

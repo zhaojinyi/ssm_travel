@@ -1,0 +1,7 @@
+com\zjy\controller\OrdersController.class
+com\zjy\controller\SysLogController.class
+com\zjy\controller\UsersController.class
+com\zjy\controller\ProductController.class
+com\zjy\controller\PermissionController.class
+com\zjy\controller\RoleController.class
+com\zjy\controller\LogAop.class

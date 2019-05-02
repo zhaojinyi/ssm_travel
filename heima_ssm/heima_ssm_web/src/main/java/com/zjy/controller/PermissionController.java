@@ -26,7 +26,7 @@ public class PermissionController {
     @Autowired
     private PermissionConverter permissionConverter;
 
-    @RequestMapping("findAll.do")
+    @RequestMapping("/findAll.do")
     public ModelAndView findAll(){
         ModelAndView mv = new ModelAndView();
         List<PermissionDto> permissionDtoList = permissionConverter.listEntityToDto(permissionService.list());
@@ -36,7 +36,7 @@ public class PermissionController {
         return mv;
     }
 
-    @RequestMapping("save.do")
+    @RequestMapping("/save.do")
     public String addPermission(PermissionDto permissionDto){
         Permission permission = permissionConverter.dtoToEntity(permissionDto);
         permissionService.save(permission);

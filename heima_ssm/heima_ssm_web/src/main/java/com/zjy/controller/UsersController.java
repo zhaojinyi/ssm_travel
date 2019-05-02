@@ -18,13 +18,13 @@ import java.util.List;
  * @Description: com.zjy.controller
  */
 @Controller
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UsersController {
 
     @Autowired
     private UserSerivce userSerivce;
 
-    @RequestMapping("findAll.do")
+    @RequestMapping("/findAll.do")
     public ModelAndView findAll() {
 
         ModelAndView mv = new ModelAndView();
@@ -35,13 +35,13 @@ public class UsersController {
 
     }
 
-    @RequestMapping("save.do")
+    @RequestMapping("/save.do")
     public String addUser(UserInfo userInfo) {
         userSerivce.save(userInfo);
         return "redirect:findAll.do";
     }
 
-    @RequestMapping("findById.do")
+    @RequestMapping("/findById.do")
     public ModelAndView showUser(String id){
         ModelAndView mv = new ModelAndView();
 
@@ -51,7 +51,7 @@ public class UsersController {
         return mv;
     }
 
-    @RequestMapping("findUserByIdAndAllRole.do")
+    @RequestMapping("/findUserByIdAndAllRole.do")
     public ModelAndView findUserByIdAndAllRole (@RequestParam(name="id", required = true) String userId) {
         //  根据用户id查出用户信息
         UserInfoDto userInfoDto = userSerivce.showUser(userId);
@@ -65,7 +65,7 @@ public class UsersController {
         return mv;
     }
 
-    @RequestMapping("addRoleToUser.do")
+    @RequestMapping("/addRoleToUser.do")
     public String addRoleToUser(@RequestParam(name = "userId", required = true) String userId, @RequestParam(name = "ids", required = true) String[] roleIds) {
         userSerivce.addRoleToUser(userId, roleIds);
 

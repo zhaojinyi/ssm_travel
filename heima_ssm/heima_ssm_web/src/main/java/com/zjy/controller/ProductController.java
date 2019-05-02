@@ -19,7 +19,7 @@ import java.util.List;
  * @Description: com.zjy.controller
  */
 @Controller
-@RequestMapping("product")
+@RequestMapping("/product")
 public class ProductController {
 
     @Autowired
@@ -28,7 +28,7 @@ public class ProductController {
     @Autowired
     private ProductConverter productConverter;
 
-    @RequestMapping("save.do")
+    @RequestMapping("/save.do")
     public String save(ProductDto productDto) {
         Product product = productConverter.dtoToEntity(productDto);
         System.out.println(product);
@@ -37,7 +37,7 @@ public class ProductController {
     }
 
     // 查询全部产品
-    @RequestMapping("findAll.do")
+    @RequestMapping("/findAll.do")
     @RolesAllowed("ADMIN")
     public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();
